@@ -1,0 +1,19 @@
+.sideNav {
+    width: 10rem;
+    height: 100vh;
+    color: blueviolet;
+}
+
+
+
+li {
+    color: red;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
