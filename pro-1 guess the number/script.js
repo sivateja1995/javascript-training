@@ -12,3 +12,4 @@ document.querySelector('.message ').textContent = '🎉 correct Number!';
 // for score selector 
 document.querySelector(".score").textContent = '19';
 
+// 
