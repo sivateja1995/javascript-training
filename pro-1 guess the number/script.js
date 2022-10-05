@@ -22,8 +22,18 @@ document.querySelector(".score").textContent = '19';
 document.querySelector(".guess").value = 16;
 */
 
-// creating the click event when the button is pressed
-document.querySelector('.check').addEventListener('click', function checkTheGuess() {
+
+
+/** creating the click event function  */
+const guess = function checkTheGuess() {
+    console.log('button is clicked');
     const guessNumber = Number(document.querySelector('.guess').value);
-    console.log(typeof guessNumber);
-});
+    if (!!guessNumber) {
+        console.log(typeof guessNumber);
+    } else {
+        document.querySelector('.message ').textContent = 'No Number Entered!! ⛔'
+    }
+}
+
+// creating the click event when the button is pressed
+document.querySelector('.check').addEventListener('click', guess);
