@@ -27,17 +27,18 @@ const guess = function checkTheGuess() {
     const guessNumber = Number(document.querySelector('.guess').value);
     if (!!guessNumber) {
         if (guessNumber > secretNumber) {
-            document.querySelector('.message ').textContent = 'Entered Number greater than guess Number';
+            document.querySelector('.message ').textContent = 'too High !!';
             document.querySelector(".score").textContent = Number(document.querySelector(".score").textContent) - 1;
         } else if (guessNumber < secretNumber) {
-            document.querySelector('.message ').textContent = 'Entered Number less than guess Number';
+            document.querySelector('.message ').textContent = 'too less !!';
             document.querySelector(".score").textContent = Number(document.querySelector(".score").textContent) - 1;
         } else if (guessNumber === secretNumber) {
             document.querySelector('.message ').textContent = '🎉 correct Number!';
-
-            const highScore = Number(document.querySelector(".score").textContent);
-            localStorage.setItem('highScore', highScore);
-            document.querySelector(".highscore").textContent = localStorage.getItem('highScore');
+            if (Number(document.querySelector(".score").textContent) > Number(localStorage.getItem('highScore'))) {
+                const highScore = Number(document.querySelector(".score").textContent);
+                localStorage.setItem('highScore', highScore);
+                document.querySelector(".highscore").textContent = localStorage.getItem('highScore');
+            }
         }
     } else {
         document.querySelector('.message').textContent = 'No Number Entered!! ⛔'
