@@ -23,27 +23,46 @@ document.querySelector(".guess").value = 16;
 
 /** creating the click event function  */
 const guess = function checkTheGuess() {
-    console.log('button is clicked');
-    const guessNumber = Number(document.querySelector('.guess').value);
-    if (!!guessNumber) {
-        if (guessNumber > secretNumber) {
-            document.querySelector('.message ').textContent = 'too High !!';
-            document.querySelector(".score").textContent = Number(document.querySelector(".score").textContent) - 1;
-        } else if (guessNumber < secretNumber) {
-            document.querySelector('.message ').textContent = 'too less !!';
-            document.querySelector(".score").textContent = Number(document.querySelector(".score").textContent) - 1;
-        } else if (guessNumber === secretNumber) {
-            document.querySelector('.message ').textContent = '🎉 correct Number!';
-            if (Number(document.querySelector(".score").textContent) > Number(localStorage.getItem('highScore'))) {
-                const highScore = Number(document.querySelector(".score").textContent);
-                localStorage.setItem('highScore', highScore);
-                document.querySelector(".highscore").textContent = localStorage.getItem('highScore');
+    if (Number(document.querySelector(".score").textContent) > 0) {
+        const guessNumber = document.querySelector('.guess').value;
+        if (guessNumber && guessNumber >= 0) {
+            // when the guess number is too high
+            if (guessNumber > secretNumber) {
+                document.querySelector('.message ').textContent = 'too High !!';
+                document.querySelector(".score").textContent = Number(document.querySelector(".score").textContent) - 1;
             }
+            // when guess number is too low 
+            else if (guessNumber < secretNumber) {
+                document.querySelector('.message ').textContent = 'too less !!';
+                document.querySelector(".score").textContent = Number(document.querySelector(".score").textContent) - 1;
+            }
+            // when player guess the number 
+            else if (guessNumber == secretNumber) {
+                document.querySelector('.message ').textContent = '🎉 correct Number!';
+                document.body.setAttribute('class', 'green-cls');
+                document.querySelector('.number').textContent = guessNumber;
+                if (Number(document.querySelector(".score").textContent) > Number(localStorage.getItem('highScore'))) {
+                    const highScore = Number(document.querySelector(".score").textContent);
+                    localStorage.setItem('highScore', highScore);
+                    document.querySelector(".highscore").textContent = localStorage.getItem('highScore');
+                }
+            }
+        } else {
+            document.querySelector('.message').textContent = 'No Number Entered!! ⛔'
         }
     } else {
-        document.querySelector('.message').textContent = 'No Number Entered!! ⛔'
+        document.querySelector('.message').textContent = 'you Lost the game';
     }
 }
 
 // creating the click event when the button is pressed
 document.querySelector('.check').addEventListener('click', guess);
+
+
+// function for refreshing the html page 
+const refresh = () => {
+    location.reload()
+}
+
+// on again click button
+document.querySelector("#again-btn").addEventListener('click', refresh);
