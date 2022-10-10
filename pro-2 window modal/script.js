@@ -21,3 +21,11 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 }
 
 btnCloseModal.addEventListener('click', hideModal);
+
+
+// keyboard event button 
+document.addEventListener('keydown', function btnPressed($event) {
+    if ($event?.keyCode === 27) {
+        hideModal();
+    }
+});
