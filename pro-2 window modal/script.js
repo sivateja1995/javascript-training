@@ -21,7 +21,6 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 }
 
 btnCloseModal.addEventListener('click', hideModal);
-<<<<<<< HEAD
 
 
 // keyboard event button 
@@ -30,5 +29,3 @@ document.addEventListener('keydown', function btnPressed($event) {
         hideModal();
     }
 });
-=======
->>>>>>> 02de7d3cafa7d4cbc81a60175712fcd58197795f
