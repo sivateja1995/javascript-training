@@ -35,8 +35,6 @@ btnRoll.addEventListener('click', function () {
     diceEl.setAttribute('src', `dice-${dice}.png`);
     // 3. check if rolled 1: if true, switch to next player
 
-
-
     if (dice !== 1) {
         currentScore += dice;
         current.textContent = currentScore;  
@@ -47,11 +45,13 @@ btnRoll.addEventListener('click', function () {
         switchPlayer();
         currentPlayer.classList.toggle('player--active');
     }
+});
 
 
-    // declaring the winner 
-
-
+btnHold.addEventListener('click', function () {
+    // 1. add the current score to the active player.
+    // 2. check the score is >=100  if >100 finish the game.
+    // 3. switch to the next player. 
 });
 
 
