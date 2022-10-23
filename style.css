@@ -14,6 +14,27 @@ body {
     overflow: hidden;
     display: flex;
     flex-flow: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: stretch;
+    background-color: #ffd95b;
+    width: 100%;
+    height: 100%;
+}
+
+
+container {
+    width: 90%;
+    height: 95vh;
+    display: inline;
+}
+
+.sideNav {
+    height: 95vh;
+    background-color: #ffa270;
+    margin: 1rem;
+    width: 15%;
+}
+
+ol{
+    text-decoration: none;
 }
