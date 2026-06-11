@@ -16,4 +16,5 @@ message1 = "marry and be happy";
 var a = (b = "test");
 b = "best";
 
+console.log
 // -- end of file --
