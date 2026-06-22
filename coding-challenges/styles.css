@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  height: 100vh !important;
+  background-color: aquamarine;
+}
+
+.container h1 {
+  font-weight: 600 !important;
+  font-display: block !important;
+  color: red;
+}
