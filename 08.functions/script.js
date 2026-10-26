@@ -1,10 +1,13 @@
+
+
+
+logger('my name is sivateja');  // hoisting is not applicable for function expressions, so this will throw an error if called before the function is defined.
 function logger(message) {
     console.log(message);
 }   
 
 
 
-logger('my name is sivateja');
 
 
 
@@ -27,3 +30,14 @@ const calcAge = function (birthYear) {
 
 const age = calcAge(1995);
 console.log(age);
+
+
+// anonymous functions 
+
+const calage2 = function (birthYear){
+    return 2026 - birthYear;
+}
+
+
+
+console.log(calage2(1999));
