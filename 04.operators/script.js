@@ -19,4 +19,7 @@ console.log('actual name  ===>',firstName)
 console.log('replaced value ===============>',firstName.replace(firstName.charAt(3),'meeeom'))
  // operator precedence
  console.log(now-1991 > now - 2018 );
+
+
+ 
  
