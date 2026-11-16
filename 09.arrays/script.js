@@ -22,3 +22,17 @@ console.log(years); // Output: [1990, 1985, 2005, 2010, 1995]
 const currentYear = new Date().getFullYear();
 const ages = years.map(year => currentYear - year);
 console.log(ages); // Output: undefined (forEach does not return a new array)
+
+
+// basid array operations 
+const friends = ['mohan', 'suresh', 'ramesh', 'ganesh', 'mahesh'];
+
+
+// popping the 
+friends.pop();
+console.log(friends); // Output: ['mohan', 'suresh', 'ramesh', 'ganesh']
+
+
+// pusing 
+friends.push('KUMABA GREEVA');
+console.log(friends); // Output: ['mohan', 'suresh', 'ramesh', 'ganesh', 'KUMABA GREEVA']
