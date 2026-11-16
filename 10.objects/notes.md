@@ -12,6 +12,7 @@ const obj = {
 } 
 
 for the above you cannot redeclare with new variable but you can add to existing one 
+use this keyword incase of any changes this will patch it well and follows well defined structure. 
 
 
 ```

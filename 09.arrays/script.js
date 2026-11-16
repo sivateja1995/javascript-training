@@ -36,3 +36,5 @@ console.log(friends); // Output: ['mohan', 'suresh', 'ramesh', 'ganesh']
 // pusing 
 friends.push('KUMABA GREEVA');
 console.log(friends); // Output: ['mohan', 'suresh', 'ramesh', 'ganesh', 'KUMABA GREEVA']
+
+
