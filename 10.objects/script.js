@@ -44,16 +44,26 @@ const obj2 = {
 };
 
 
-console.log("name of the object is", obj2.name());
-console.log("age of the object is", obj2.age());
-function checkThis() {
-  console.log(typeof this, this);
+// console.log("name of the object is", obj2.name());
+// console.log("age of the object is", obj2.age());
+// function checkThis() {
+//   console.log(typeof this, this);
+// }
+
+// // Non-strict mode:
+// checkThis.call(42);        // "object", [Number: 42] (boxed into a Number wrapper object)
+// checkThis.call(null);      // "object", Window / globalThis
+
+// // Strict mode ("use strict"):
+// checkThis.call(42);        // "number", 42 (raw primitive)
+// checkThis.call(null);      // "object", null
+
+
+
+
+// checking for the vote 
+if(obj2.age() >= 18){
+    console.log('You are eligible to vote');
+}else{
+    console.log('You are not eligible to vote');
 }
-
-// Non-strict mode:
-checkThis.call(42);        // "object", [Number: 42] (boxed into a Number wrapper object)
-checkThis.call(null);      // "object", Window / globalThis
-
-// Strict mode ("use strict"):
-checkThis.call(42);        // "number", 42 (raw primitive)
-checkThis.call(null);      // "object", null
