@@ -38,3 +38,16 @@ friends.push('KUMABA GREEVA');
 console.log(friends); // Output: ['mohan', 'suresh', 'ramesh', 'ganesh', 'KUMABA GREEVA']
 
 
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// in reverse 
+for (let i=arr.length-1;i>=0;i--){
+    console.log(arr[i]);
+}
+
+
+// while loop
+let i = arr.length - 1;
+while (i >= 0) {
+  console.log(`Element at index ${i}: ${arr[i]}`);
+  i--;
+}
